@@ -1,0 +1,9 @@
+# Vim Dirs #
+############
+.backup/
+.swap/
+.undo/
+
+vim/bundle
+nvim/bundle
+

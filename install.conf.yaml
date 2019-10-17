@@ -1,0 +1,22 @@
+- clean: ['~']
+
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]
+    - [ln -s ~/dotfiles/bin/tat.sh /usr/local/bin/tat, Linking tmux tat bin script]
+    - [ln -s ~/dotfiles/bin/mage2_notes.sh /usr/local/bin/mage2_notes, Linking mage2_notes bin script]
+    - [ln -s ~/dotfiles/bin/trash.sh /usr/local/bin/trash, Linking trash bin script]
+
+- link:
+    ~/.zshenv: zsh/zshenv
+    ~/.zprofile: zsh/zprofile
+    ~/.zshrc: zsh/zshrc
+    ~/.zpreztorc: zsh/zpreztorc
+    ~/.zprezto: zsh/prezto
+    ~/.config/nvim:
+        create: true
+        path: nvim/
+    ~/.vimrc: vimrc
+    ~/.vim: vim/
+    ~/.gitconfig: gitconfig
+    ~/.gitignore_global: gitignore_global
+    ~/.tmux.conf: tmux/tmux.conf

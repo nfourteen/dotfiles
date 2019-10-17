@@ -7,3 +7,56 @@
 [submodule "vim/bundle/Vundle.vim"]
 	path = vim/bundle/Vundle.vim
 	url = git@github.com:VundleVim/Vundle.vim.git
+    ignore = dirty
+[submodule "vim/bundle/ctrlp.vim"]
+	path = vim/bundle/ctrlp.vim
+	url = https://github.com/kien/ctrlp.vim.git
+    ignore = dirty
+[submodule "vim/bundle/ag.vim"]
+	path = vim/bundle/ag.vim
+	url = https://github.com/rking/ag.vim.git
+    ignore = dirty
+[submodule "vim/bundle/ctrlp-py-matcher"]
+	path = vim/bundle/ctrlp-py-matcher
+	url = https://github.com/FelikZ/ctrlp-py-matcher.git
+    ignore = dirty
+[submodule "vim/bundle/nerdtree"]
+	path = vim/bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
+    ignore = dirty
+[submodule "vim/bundle/ultisnips"]
+	path = vim/bundle/ultisnips
+	url = https://github.com/SirVer/ultisnips.git
+    ignore = dirty
+[submodule "vim/bundle/vim-colors-solarized"]
+	path = vim/bundle/vim-colors-solarized
+	url = https://github.com/altercation/vim-colors-solarized.git
+    ignore = dirty
+[submodule "vim/bundle/vim-fugitive"]
+	path = vim/bundle/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive.git
+    ignore = dirty
+[submodule "vim/bundle/vim-less"]
+	path = vim/bundle/vim-less
+	url = https://github.com/groenewege/vim-less.git
+    ignore = dirty
+[submodule "vim/bundle/vim-lexical"]
+	path = vim/bundle/vim-lexical
+	url = https://github.com/reedes/vim-lexical.git
+    ignore = dirty
+[submodule "vim/bundle/vim-markdown-folding"]
+	path = vim/bundle/vim-markdown-folding
+	url = https://github.com/nelstrom/vim-markdown-folding.git
+    ignore = dirty
+[submodule "vim/bundle/vim-pencil"]
+	path = vim/bundle/vim-pencil
+	url = https://github.com/reedes/vim-pencil.git
+    ignore = dirty
+[submodule "vim/bundle/vim-surround"]
+	path = vim/bundle/vim-surround
+	url = https://github.com/tpope/vim-surround.git
+    ignore = dirty
+[submodule "vim/bundle/vim-tmux-navigator"]
+	path = vim/bundle/vim-tmux-navigator
+	url = https://github.com/christoomey/vim-tmux-navigator.git
+    ignore = dirty

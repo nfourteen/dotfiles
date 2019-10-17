@@ -1,0 +1,29 @@
+#
+# Executes commands at the start of an interactive session.
+#
+# Authors:
+#   Sorin Ionescu <sorin.ionescu@gmail.com>
+#
+
+# Source Prezto.
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+fi
+
+# Customize to your needs...
+
+# tell Tmux were using screen-256color
+export TERM="screen-256color"
+alias tmux="tmux -2"
+
+# set mysql prompt to display user@host tbl[table]
+export MYSQL_PS1="\u@\h tbl[\d]> "
+
+# add custom prompt location to fpath
+# see https://github.com/sindresorhus/pure: instructions taken from section titled "Manually" of readme
+fpath=( "$HOME/dotfiles/zsh/custom_prompts" $fpath )
+
+# set the custom prompt into zsh config
+autoload -U promptinit; promptinit
+prompt nfourteen
+

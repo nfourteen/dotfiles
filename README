@@ -1,0 +1,60 @@
+# bootstrap.sh
+
+Meant to install useful binaries (`bootstrap/homebrew.sh`) on a new machine, some required for dotfiles. Also executes `bootstrap/mac_defaults.sh`, which sets Mac system configuration up better using `defaults write`.
+
+After bootstrap.sh has finished,  run `chsh -s $(which zsh)` to set the user shell to zsh. If `chsh` displays `chsh:/usr/local/bin/zsh: non-standard shell`, that's an error. It means that `chsh` will only accept shells that are defined in the file `/etc/shells`. Add `/usr/local/bin/zsh` to `/etc/shells`:
+`sudo echo "$(which zsh)" >> /etc/shells` and then run `chsh -s $(which zsh)` again.
+
+**A restart is required for some of the changes to take affect.**
+
+### Other Tasks for a New Machine
+
+Install applications and their settings/extensions:
+
+* iTerm 2
+* Moom
+* Alfred
+* Chrome
+* VirtualBox & Vagrant
+* Google Drive
+* Adobe CS6 Suite
+    - Photoshop: import exported presets, Nik Software
+* Photo Mechanic
+    - IPTC Stationery Pad, keywords hierarchy export, sync preferences
+* PhpStorm
+    - import exported settings
+
+
+# install.sh
+
+Installs dotfile config or updates symlinks using DotBot.
+
+# Submodule Pains
+
+If when running `install.sh` an `error: pathspec 'dotbot' did not match any file(s) known to git` error is thrown, but the 'dotbot' files still exist, rerun `git submodule add git@github.com:anishathalye/dotfiles.git` so git reports `Adding existing repo at 'dotbot' to the index`.
+
+Vim uses Vundle as a plugin manager. If after running `git add .`, a `warning: adding embedded git repository: vim/bundle/ctrlp.vim`, do the following:
+
+```
+git reset HEAD // unstage all commits
+
+// get the url to add as a submodule
+git config --get remote.origin.url
+
+// use URL from above and the path from the warning message
+// should see 'Adding existing repo at 'vim/bundle/ctrlp.vim' to the index'
+git submodule add https://github.com/kien/ctrlp.vim.git vim/bundle/ctrlp.vim
+
+// now find added submodule repo and add ignore = untracked
+vim .gitmodules
+
+[submodule "vim/bundle/ctrlp.vim"]
+	path = vim/bundle/ctrlp.vim
+	url = https://github.com/kien/ctrlp.vim.git
+	ignore = untracked
+```
+
+If any Vim plugins are added and are listed in `Untracked Files:`, run following steps above by `cd`ing into the path and getting the remote URL. Must manually add all plugin repos as submodules.
+
+
+

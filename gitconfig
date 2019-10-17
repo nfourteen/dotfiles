@@ -1,0 +1,47 @@
+[core]
+	excludesfile = ~/.gitignore_global
+	editor = vim
+[alias]
+	lg = log --oneline --decorate --all --graph
+	lol = log --graph --decorate --pretty=oneline --abbrev-commit --all
+	st = status
+	sts = status --short
+    co = checkout
+    cob = checkout -b
+    cm = commit -m
+    brl = branch -a # list branches
+
+    # submodule shortcuts
+    si = submodule init
+    su = submodule update
+    sub = "!git submodule sync && git submodule update"
+
+    # show number of commits per contributer, sorted
+    count = shortlog -sn
+
+    undo = reset --soft HEAD~1
+    amend = commit -a --amend
+
+    # show what I did today
+    day = "!sh -c 'git log --reverse --no-merges --branches=* --date=local --after=\"yesterday 11:59PM\" --author=\"`git config --get user.name`\"'"
+[push]
+	default = simple
+[color]
+    diff = auto
+    status = auto
+    branch = auto
+    interactive = auto
+    ui = auto
+[color "branch"]
+    current = green
+    local = green
+    remote = red
+[color "status"]
+    added = green
+    changed = yellow
+    untracked = red
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true

@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/usr/local/Cellar/neovim/0.3.4/share/nvim/runtime/doc'
+let g:netrw_dirhist_2='/Users/nfourteen/dotfiles'
+let g:netrw_dirhist_3='/Users/nfourteen/dotfiles/nvim'
+let g:netrw_dirhist_4='/Users/nfourteen/dotfiles/nvim/bundle'
