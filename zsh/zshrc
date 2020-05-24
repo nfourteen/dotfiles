@@ -14,16 +14,26 @@ fi
 
 # tell Tmux were using screen-256color
 export TERM="screen-256color"
-alias tmux="tmux -2"
 
 # set mysql prompt to display user@host tbl[table]
 export MYSQL_PS1="\u@\h tbl[\d]> "
 
-# add custom prompt location to fpath
-# see https://github.com/sindresorhus/pure: instructions taken from section titled "Manually" of readme
-fpath=( "$HOME/dotfiles/zsh/custom_prompts" $fpath )
 
-# set the custom prompt into zsh config
-autoload -U promptinit; promptinit
-prompt nfourteen
+# SwiftOtter config converted from bash by Catalina
+export SWIFTOTTER_VAGRANT_ENV=/Volumes/Development/vagrant
+export SWIFTOTTER_PROJECTS=/Volumes/Development/swiftotter
+
+ssh-add -K ~/.ssh/id_rsa
+
+export PATH=$PATH:$HOME/.composer/vendor/bin:
+export SWIFTOTTER_VAGRANT_ENV=/Volumes/Development/vagrant
+
+# PHP Versions
+#export PATH="/usr/local/opt/php@7.2/bin:$PATH"
+#export PATH="/usr/local/opt/php@7.2/sbin:$PATH"
+
+export PATH="/usr/local/opt/php@7.3/bin:$PATH"
+export PATH="/usr/local/opt/php@7.3/sbin:$PATH"
+
+#export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 

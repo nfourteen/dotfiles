@@ -15,7 +15,6 @@ brew install htop
 brew install wget
 brew install vim
 brew install nvim
-brew install exiftool # image metadata reader
 brew install tmux
 
 # development tools
@@ -23,5 +22,3 @@ brew install git
 brew install zsh
 brew install node
 
-# misc
-brew install ffmpeg

@@ -13,6 +13,13 @@
 alias tls="tmux list-sessions"
 alias ta="tmux attach-session"
 alias tk="tmux kill-session -t"
+alias td="tmux detach"
+alias tmux="tmux -2"
+
+#PHP
+alias m="bin/magento"
+alias comp="php -dmemory_limit=6G "$(which composer)""
+alias phpde="php -dxdebug.remote_enable=true -dxdebug.remote_autostart=true -dxdebug.remote_connect_back=0 -dxdebug.remote_host=127.0.0.1 -dxdebug.remote_port=9001 -dxdebug.idekey=\"PHPSTORM\""
 
 # Directory
 function mkcd () { mkdir -p "$@" && cd "$@"; }

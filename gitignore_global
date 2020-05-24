@@ -41,7 +41,8 @@ Thumbs.db
 #############
 .idea/
 
-# Tool Files #
-##############
-*.lock # Gemfile and composer
-
+# Magento  #
+############
+MSP/
+pre_composer_update_2.3.php
+Davidnimorwiczphotography/
